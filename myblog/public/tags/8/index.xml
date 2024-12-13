@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>8 on TeXify2 - hugo theme | weastur</title>
+    <link>http://localhost:1313/tags/8/</link>
+    <description>Recent content in 8 on TeXify2 - hugo theme | weastur</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 12 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/8/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2023 AMC 8 Problem 24</title>
+      <link>http://localhost:1313/post/amc8202425/</link>
+      <pubDate>Thu, 12 Dec 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/amc8202425/</guid>
+      <description>&lt;p&gt;Isosceles $\triangle ABC$ has equal side lengths $AB$ and $BC$. In the figure below, segments are drawn parallel to $\overline{AC}$ so that the shaded portions of $\triangle ABC$ have the same area. The heights of the two unshaded portions are 11 and 5 units, respectively. What is the height $h$ of $\triangle ABC$?&lt;/p&gt;
+&lt;p&gt;$\textbf{(A) } 14.6 \qquad \textbf{(B) } 14.8 \qquad \textbf{(C) } 15 \qquad \textbf{(D) } 15.2 \qquad \textbf{(E) } 15.4$&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

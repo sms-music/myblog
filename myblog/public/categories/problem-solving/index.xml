@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Problem Solving on TeXify2 - hugo theme | weastur</title>
+    <link>http://localhost:1313/categories/problem-solving/</link>
+    <description>Recent content in Problem Solving on TeXify2 - hugo theme | weastur</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 11 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/categories/problem-solving/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2023 AMC 8 Problem 23 Solution</title>
+      <link>http://localhost:1313/post/amc8202323/</link>
+      <pubDate>Wed, 11 Dec 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/amc8202323/</guid>
+      <description>&lt;p&gt;Each square in a $3 \times 3$ grid is randomly filled with one of the $4$ gray and white tiles. What is the probability that the tiling will contain a large gray diamond in one of the smaller $2 \times 2$ grids?&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

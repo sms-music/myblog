@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Problem 22 on TeXify2 - hugo theme | weastur</title>
+    <link>http://localhost:1313/tags/problem-22/</link>
+    <description>Recent content in Problem 22 on TeXify2 - hugo theme | weastur</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 16 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/problem-22/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2023 AMC 8 Problem 22</title>
+      <link>http://localhost:1313/post/amc8202322/</link>
+      <pubDate>Thu, 16 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/amc8202322/</guid>
+      <description>&lt;p&gt;In a sequence of positive integers, each term after the second is the product of the previous two terms. The sixth term is $4000$. What is the first term?&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

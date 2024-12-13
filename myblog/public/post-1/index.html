@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en" style="font-size: 120%">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
+  <meta name="author" content="">
+
+  
+  
+  <meta name="description" content="Step-by-step walkthrough and solution for calculating antinodes in Advent of Code.">
+  
+
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
+  
+  
+  <meta name="keywords" content="hugo latex theme blog texify texify2 weastur">
+  
+
+  
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
+<script type="module">
+    import renderMathInElement from "https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.mjs";
+    renderMathInElement(document.body);
+</script>
+
+  
+
+  
+  <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="weastur" data-description="Support me on Buy me a coffee!" data-message="" data-color="#FF5F5F" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
+
+
+  
+  <meta property="og:url" content="http://localhost:1313/post-1/">
+  <meta property="og:site_name" content="TeXify2 - hugo theme | weastur">
+  <meta property="og:title" content="Advent of Code - 2024 Day 8: Resonant Collinearity">
+  <meta property="og:description" content="Step-by-step walkthrough and solution for calculating antinodes in Advent of Code.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:published_time" content="2024-12-08T10:30:00+08:00">
+    <meta property="article:modified_time" content="2024-12-08T10:30:00+08:00">
+    <meta property="article:tag" content="Advent of Code">
+    <meta property="article:tag" content="Python">
+    <meta property="article:tag" content="Algorithms">
+    <meta property="article:tag" content="Tutorial">
+    <meta property="og:image" content="http://localhost:1313/images/logo.jpg">
+
+
+  
+  <link rel="canonical" href="http://localhost:1313/post-1/">
+
+  
+  
+  
+  <meta itemprop="name" content="Advent of Code - 2024 Day 8: Resonant Collinearity">
+  <meta itemprop="description" content="Step-by-step walkthrough and solution for calculating antinodes in Advent of Code.">
+  <meta itemprop="datePublished" content="2024-12-08T10:30:00+08:00">
+  <meta itemprop="dateModified" content="2024-12-08T10:30:00+08:00">
+  <meta itemprop="wordCount" content="576">
+  <meta itemprop="image" content="http://localhost:1313/images/logo.jpg">
+  <meta itemprop="keywords" content="Advent of Code,Python,Algorithms,Tutorial">
+
+  
+  <link media="screen" rel="stylesheet" href='http://localhost:1313/css/common.css'>
+  <link media="screen" rel="stylesheet" href='http://localhost:1313/css/content.css'>
+
+  
+  
+  <title>Advent of Code - 2024 Day 8: Resonant Collinearity - TeXify2 - hugo theme | weastur</title>
+  
+
+  
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://localhost:1313/images/logo.jpg">
+  <meta name="twitter:title" content="Advent of Code - 2024 Day 8: Resonant Collinearity">
+  <meta name="twitter:description" content="Step-by-step walkthrough and solution for calculating antinodes in Advent of Code.">
+
+
+  
+<link rel="stylesheet" href='http://localhost:1313/css/single.css'>
+<link rel="stylesheet" href='http://localhost:1313/css/sharingbuttons.css'>
+
+</head>
+
+<body>
+  <div id="wrapper">
+    
+
+
+<header id="header">
+  <h1>
+    <a href="http://localhost:1313/">TeXify2</a>
+  </h1>
+
+  <nav>
+    
+    <span class="nav-bar-item">
+      <a class="link" href="/">Posts</a>
+    </span>
+    
+    <span class="nav-bar-item">
+      <a class="link" href="/post/">Archive</a>
+    </span>
+    
+    <span class="nav-bar-item">
+      <a class="link" href="/about/">About</a>
+    </span>
+    
+  </nav>
+  
+  <div id="searchbox">
+    <form method="get" id="search" target="_blank" action="https://duckduckgo.com/">
+      <input type="hidden" name="sites" value="localhost:1313">
+      <input type="text" name="q" placeholder="Search...">
+    </form>
+  </div>
+  
+</header>
+
+    
+<main id="main" class="post">
+  
+  <article class="content numbered-subtitles">
+    <h2 id="introduction">Introduction</h2>
+<p>From <a href="https://adventofcode.com/2024/day/8">Advent of Code</a></p>
+<p>This walkthrough explains the solution for calculating <strong>antinodes</strong> based on a grid of antennas. The problem is inspired by a coding challenge where specific alignment rules govern the calculation of unique grid points called antinodes.</p>
+<hr>
+<h2 id="problem-statement">Problem Statement</h2>
+<p>We are given a 2D grid where:</p>
+<ul>
+<li><strong>Antennas</strong> are represented by characters (e.g., <code>a</code>, <code>b</code>, etc.).</li>
+<li><strong>Empty spaces</strong> are represented by <code>.</code>.</li>
+</ul>
+<p><strong>Antinodes</strong> are special points calculated as follows:</p>
+<ol>
+<li>Antinodes are aligned with two antennas of the same type.</li>
+<li>Antinodes are located on a line extending through the antennas.</li>
+<li>One antenna must be twice as far from the antinode as the other.</li>
+</ol>
+<hr>
+<h3 id="example-input-grid">Example Input Grid</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>..........
+</span></span><span style="display:flex;"><span>...#......
+</span></span><span style="display:flex;"><span>..........
+</span></span><span style="display:flex;"><span>....a.....
+</span></span><span style="display:flex;"><span>..........
+</span></span><span style="display:flex;"><span>.....a....
+</span></span><span style="display:flex;"><span>..........
+</span></span><span style="display:flex;"><span>......#...
+</span></span><span style="display:flex;"><span>..........
+</span></span><span style="display:flex;"><span>..........
+</span></span></code></pre></div><p>In this grid:</p>
+<ul>
+<li>The antennas are labeled as <code>a</code>, and there are two of them.</li>
+<li>The <code>#</code> symbols will represent antinodes in the output.</li>
+</ul>
+<hr>
+<h2 id="step-by-step-solution">Step-by-Step Solution</h2>
+<h3 id="step-1-parse-the-grid">Step 1: Parse the Grid</h3>
+<p>We first extract all the positions of antennas from the grid and group them by type (e.g., all <code>a</code> positions together).</p>
+<h3 id="step-2-pair-up-antennas">Step 2: Pair Up Antennas</h3>
+<p>For each group of antennas, we create all possible pairs. For example, if there are two antennas of type <code>a</code> at <code>(3, 4)</code> and <code>(5, 5)</code>, the only pair is <code>[(3, 4), (5, 5)]</code>.</p>
+<h3 id="step-3-calculate-antinodes">Step 3: Calculate Antinodes</h3>
+<p>Using each pair of antennas, calculate two antinodes based on:</p>
+<ul>
+<li>The midpoint of the two antennas.</li>
+<li>Extending the line formed by the antennas in both directions.</li>
+</ul>
+<h3 id="step-4-validate-antinodes">Step 4: Validate Antinodes</h3>
+<p>Ensure antinodes:</p>
+<ul>
+<li>Are within the grid bounds.</li>
+<li>Do not overwrite existing antennas or invalid positions.</li>
+</ul>
+<hr>
+<h3 id="python-implementation">Python Implementation</h3>
+<p>Here is the complete Python implementation of the solution:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">from</span> <span style="color:#000">collections</span> <span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">defaultdict</span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">from</span> <span style="color:#000">itertools</span> <span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">combinations</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">def</span> <span style="color:#000">find_antinodes</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">antenna1</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">antenna2</span><span style="color:#000;font-weight:bold">):</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">x1</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">y1</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">antenna1</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">x2</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">y2</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">antenna2</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">mx</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">my</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">x1</span> <span style="color:#ce5c00;font-weight:bold">+</span> <span style="color:#000">x2</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">/</span> <span style="color:#0000cf;font-weight:bold">2</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">y1</span> <span style="color:#ce5c00;font-weight:bold">+</span> <span style="color:#000">y2</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">/</span> <span style="color:#0000cf;font-weight:bold">2</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">dx</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">dy</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">x2</span> <span style="color:#ce5c00;font-weight:bold">-</span> <span style="color:#000">x1</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">y2</span> <span style="color:#ce5c00;font-weight:bold">-</span> <span style="color:#000">y1</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">antinode1</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#204a87">round</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">mx</span> <span style="color:#ce5c00;font-weight:bold">+</span> <span style="color:#000">dx</span><span style="color:#000;font-weight:bold">),</span> <span style="color:#204a87">round</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">my</span> <span style="color:#ce5c00;font-weight:bold">+</span> <span style="color:#000">dy</span><span style="color:#000;font-weight:bold">))</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">antinode2</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#204a87">round</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">mx</span> <span style="color:#ce5c00;font-weight:bold">-</span> <span style="color:#000">dx</span><span style="color:#000;font-weight:bold">),</span> <span style="color:#204a87">round</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">my</span> <span style="color:#ce5c00;font-weight:bold">-</span> <span style="color:#000">dy</span><span style="color:#000;font-weight:bold">))</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#000">antinode1</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">antinode2</span><span style="color:#000;font-weight:bold">]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000">board</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#4e9a06">&#34;..........&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#4e9a06">&#34;...#......&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#4e9a06">&#34;..........&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#4e9a06">&#34;....a.....&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#4e9a06">&#34;..........&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#4e9a06">&#34;.....a....&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#4e9a06">&#34;..........&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#4e9a06">&#34;......#...&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#4e9a06">&#34;..........&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#4e9a06">&#34;..........&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000">board</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#204a87">list</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">row</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#204a87;font-weight:bold">for</span> <span style="color:#000">row</span> <span style="color:#204a87;font-weight:bold">in</span> <span style="color:#000">board</span><span style="color:#000;font-weight:bold">]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000">listOfElements</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">defaultdict</span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87">list</span><span style="color:#000;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">for</span> <span style="color:#000">i</span> <span style="color:#204a87;font-weight:bold">in</span> <span style="color:#204a87">range</span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87">len</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">board</span><span style="color:#000;font-weight:bold">)):</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">for</span> <span style="color:#000">j</span> <span style="color:#204a87;font-weight:bold">in</span> <span style="color:#204a87">range</span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87">len</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">board</span><span style="color:#000;font-weight:bold">[</span><span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">])):</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">if</span> <span style="color:#000">board</span><span style="color:#000;font-weight:bold">[</span><span style="color:#000">i</span><span style="color:#000;font-weight:bold">][</span><span style="color:#000">j</span><span style="color:#000;font-weight:bold">]</span> <span style="color:#ce5c00;font-weight:bold">!=</span> <span style="color:#4e9a06">&#34;.&#34;</span><span style="color:#000;font-weight:bold">:</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#000">listOfElements</span><span style="color:#000;font-weight:bold">[</span><span style="color:#000">board</span><span style="color:#000;font-weight:bold">[</span><span style="color:#000">i</span><span style="color:#000;font-weight:bold">][</span><span style="color:#000">j</span><span style="color:#000;font-weight:bold">]]</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">append</span><span style="color:#000;font-weight:bold">((</span><span style="color:#000">i</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">j</span><span style="color:#000;font-weight:bold">))</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000">allPos</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">[]</span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">for</span> <span style="color:#000">key</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">positions</span> <span style="color:#204a87;font-weight:bold">in</span> <span style="color:#000">listOfElements</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">items</span><span style="color:#000;font-weight:bold">():</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">listf</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">combinations</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">positions</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">2</span><span style="color:#000;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">for</span> <span style="color:#000">pair</span> <span style="color:#204a87;font-weight:bold">in</span> <span style="color:#000">listf</span><span style="color:#000;font-weight:bold">:</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">antinodes</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">find_antinodes</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">pair</span><span style="color:#000;font-weight:bold">[</span><span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">],</span> <span style="color:#000">pair</span><span style="color:#000;font-weight:bold">[</span><span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">])</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">for</span> <span style="color:#000">antinode</span> <span style="color:#204a87;font-weight:bold">in</span> <span style="color:#000">antinodes</span><span style="color:#000;font-weight:bold">:</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#000">x</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">y</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">antinode</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">if</span> <span style="color:#0000cf;font-weight:bold">0</span> <span style="color:#ce5c00;font-weight:bold">&lt;=</span> <span style="color:#000">x</span> <span style="color:#ce5c00;font-weight:bold">&lt;</span> <span style="color:#204a87">len</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">board</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#204a87;font-weight:bold">and</span> <span style="color:#0000cf;font-weight:bold">0</span> <span style="color:#ce5c00;font-weight:bold">&lt;=</span> <span style="color:#000">y</span> <span style="color:#ce5c00;font-weight:bold">&lt;</span> <span style="color:#204a87">len</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">board</span><span style="color:#000;font-weight:bold">[</span><span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">])</span> <span style="color:#204a87;font-weight:bold">and</span> <span style="color:#000">board</span><span style="color:#000;font-weight:bold">[</span><span style="color:#000">x</span><span style="color:#000;font-weight:bold">][</span><span style="color:#000">y</span><span style="color:#000;font-weight:bold">]</span> <span style="color:#ce5c00;font-weight:bold">==</span> <span style="color:#4e9a06">&#34;.&#34;</span><span style="color:#000;font-weight:bold">:</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#000">allPos</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">append</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">antinode</span><span style="color:#000;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">for</span> <span style="color:#000">x</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">y</span> <span style="color:#204a87;font-weight:bold">in</span> <span style="color:#000">allPos</span><span style="color:#000;font-weight:bold">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">board</span><span style="color:#000;font-weight:bold">[</span><span style="color:#000">x</span><span style="color:#000;font-weight:bold">][</span><span style="color:#000">y</span><span style="color:#000;font-weight:bold">]</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">&#34;#&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">for</span> <span style="color:#000">row</span> <span style="color:#204a87;font-weight:bold">in</span> <span style="color:#000">board</span><span style="color:#000;font-weight:bold">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87">print</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;&#34;</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">join</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">row</span><span style="color:#000;font-weight:bold">))</span>
+</span></span></code></pre></div><hr>
+<h3 id="walkthrough-of-the-code">Walkthrough of the Code</h3>
+<h4 id="parsing-the-grid">Parsing the Grid</h4>
+<p>The grid is converted into a list of lists for easy manipulation. Each antenna position is stored in a dictionary, grouped by its type.</p>
+<h4 id="calculating-antinodes">Calculating Antinodes</h4>
+<p>For each pair of antennas, the function <code>find_antinodes</code> calculates two potential antinode positions. The positions are derived using:</p>
+<ul>
+<li>The midpoint between the two antennas.</li>
+<li>The vector formed by the line connecting the antennas.</li>
+</ul>
+<h4 id="validating-positions">Validating Positions</h4>
+<p>Antinodes are validated to ensure:</p>
+<ul>
+<li>They are within grid bounds.</li>
+<li>They do not overwrite existing antennas or invalid cells.</li>
+</ul>
+<h4 id="updating-the-grid">Updating the Grid</h4>
+<p>Finally, all valid antinodes are marked on the grid with <code>#</code>.</p>
+<hr>
+<h3 id="example-output">Example Output</h3>
+<p>The updated grid with antinodes marked:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>..........
+</span></span><span style="display:flex;"><span>...#......
+</span></span><span style="display:flex;"><span>..........
+</span></span><span style="display:flex;"><span>....a.....
+</span></span><span style="display:flex;"><span>..........
+</span></span><span style="display:flex;"><span>.....a....
+</span></span><span style="display:flex;"><span>..........
+</span></span><span style="display:flex;"><span>......#...
+</span></span><span style="display:flex;"><span>..........
+</span></span><span style="display:flex;"><span>..........
+</span></span></code></pre></div><hr>
+<h2 id="summary">Summary</h2>
+<p>This solution demonstrates:</p>
+<ul>
+<li>Parsing and grouping data effectively.</li>
+<li>Using geometric calculations to solve a problem.</li>
+<li>Validating results to ensure correctness.</li>
+</ul>
+<p>This approach can be adapted to other grid-based challenges involving geometric alignment.</p>
+
+  </article>
+
+  
+
+</main>
+
+    <footer id="footer">
+  <div>
+    <span>© 2023</span> - <span>2024</span>
+  </div>
+
+  <div>
+    <span>Powered by </span>
+    <a class="link" target="_blank" href="https://gohugo.io/">Hugo</a>
+    <span> 🍦 Theme </span>
+    <a class="link" target="_blank" href="https://texify2.io">TeXify2</a>
+  </div>
+
+  <div class="footnote">
+    <span>Follow me on <a class=link href=https://github.com/weastur target=_blank rel=noopener>GitHub</a>,
+<a class=link href=https://www.linkedin.com/in/weastur/ target=_blank rel=noopener>LinkedIn</a> or
+<a class=link href=/index.xml>RSS</a> |
+<a class=link href=https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en target=_blank rel=noopener>CC BY-NC-SA 4.0</a>
+</span>
+  </div>
+</footer>
+
+  </div>
+
+  
+  
+
+  
+  
+
+  
+  
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-0GZRVRLSQV"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-0GZRVRLSQV');
+        }
+      </script>
+
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Adventofcode on TeXify2 - hugo theme | weastur</title>
+    <link>http://localhost:1313/tags/adventofcode/</link>
+    <description>Recent content in Adventofcode on TeXify2 - hugo theme | weastur</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 08 Dec 2024 10:30:00 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/adventofcode/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Advent of Code - 2024 Day 8: Resonant Collinearity</title>
+      <link>http://localhost:1313/post/post-1/</link>
+      <pubDate>Sun, 08 Dec 2024 10:30:00 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/post-1/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;From &lt;a href=&#34;https://adventofcode.com/2024/day/8&#34;&gt;Advent of Code&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This walkthrough explains the solution for calculating &lt;strong&gt;antinodes&lt;/strong&gt; based on a grid of antennas. The problem is inspired by a coding challenge where specific alignment rules govern the calculation of unique grid points called antinodes.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on My New Hugo Site</title>
+    <link>http://localhost:60505/posts/</link>
+    <description>Recent content in Posts on My New Hugo Site</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 08 Dec 2024 10:30:00 +0800</lastBuildDate>
+    <atom:link href="http://localhost:60505/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Advent of Code - 2024 Day 8</title>
+      <link>http://localhost:60505/posts/post-1/</link>
+      <pubDate>Sun, 08 Dec 2024 10:30:00 +0800</pubDate>
+      <guid>http://localhost:60505/posts/post-1/</guid>
+      <description>&lt;p&gt;Day 8&lt;/p&gt;&#xA;&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;From &lt;a href=&#34;https://adventofcode.com/2024/day/8&#34;&gt;Advent of Code&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;This walkthrough explains the solution for calculating &lt;strong&gt;antinodes&lt;/strong&gt; based on a grid of antennas. The problem is inspired by a coding challenge where specific alignment rules govern the calculation of unique grid points called antinodes.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;problem-statement&#34;&gt;Problem Statement&lt;/h2&gt;&#xA;&lt;p&gt;We are given a 2D grid where:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Antennas&lt;/strong&gt; are represented by characters (e.g., &lt;code&gt;a&lt;/code&gt;, &lt;code&gt;b&lt;/code&gt;, etc.).&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Empty spaces&lt;/strong&gt; are represented by &lt;code&gt;.&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;Antinodes&lt;/strong&gt; are special points calculated as follows:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Advent of Code - 2024 Day 8</title>
+      <link>http://localhost:60505/posts/post-2/</link>
+      <pubDate>Sun, 08 Dec 2024 10:30:00 +0800</pubDate>
+      <guid>http://localhost:60505/posts/post-2/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;From &lt;a href=&#34;https://adventofcode.com/2024/day/8&#34;&gt;Advent of Code&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;This walkthrough explains the solution for calculating &lt;strong&gt;antinodes&lt;/strong&gt; based on a grid of antennas. The problem is inspired by a coding challenge where specific alignment rules govern the calculation of unique grid points called antinodes.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;problem-statement&#34;&gt;Problem Statement&lt;/h2&gt;&#xA;&lt;p&gt;We are given a 2D grid where:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Antennas&lt;/strong&gt; are represented by characters (e.g., &lt;code&gt;a&lt;/code&gt;, &lt;code&gt;b&lt;/code&gt;, etc.).&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Empty spaces&lt;/strong&gt; are represented by &lt;code&gt;.&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;Antinodes&lt;/strong&gt; are special points calculated as follows:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Python Regular Expressions (re) Tutorial</title>
+      <link>http://localhost:60505/posts/post-11/</link>
+      <pubDate>Sun, 08 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:60505/posts/post-11/</guid>
+      <description>&lt;p&gt;Regular expressions (&lt;code&gt;re&lt;/code&gt;) in Python are a powerful tool for text processing. This tutorial will guide you through the basics and practical usage of &lt;code&gt;re&lt;/code&gt;.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h3 id=&#34;importing-the-re-module&#34;&gt;Importing the &lt;code&gt;re&lt;/code&gt; Module&lt;/h3&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; re&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;&#xA;&lt;h3 id=&#34;key-functions-in-re&#34;&gt;Key Functions in &lt;code&gt;re&lt;/code&gt;&lt;/h3&gt;&#xA;&lt;h3 id=&#34;1-rematchpattern-string&#34;&gt;1. &lt;code&gt;re.match(pattern, string)&lt;/code&gt;&lt;/h3&gt;&#xA;&lt;p&gt;Checks if the pattern matches &lt;strong&gt;at the beginning&lt;/strong&gt; of the string.&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;result &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; re&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;match&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;r&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Hello&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Hello, World!&amp;#34;&lt;/span&gt;)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; result:&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    print(result&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;group())  &lt;span style=&#34;color:#75715e&#34;&gt;# Output: Hello&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;&#xA;&lt;h3 id=&#34;2-researchpattern-string&#34;&gt;2. &lt;code&gt;re.search(pattern, string)&lt;/code&gt;&lt;/h3&gt;&#xA;&lt;p&gt;Searches for the &lt;strong&gt;first occurrence&lt;/strong&gt; of the pattern in the string.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Markdown Syntax Guide</title>
+      <link>http://localhost:60505/posts/post-8/</link>
+      <pubDate>Tue, 20 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:60505/posts/post-8/</guid>
+      <description>&lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:60505/posts/post-3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:60505/posts/post-3/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

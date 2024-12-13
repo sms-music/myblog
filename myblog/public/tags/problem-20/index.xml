@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Problem 20 on TeXify2 - hugo theme | weastur</title>
+    <link>http://localhost:1313/tags/problem-20/</link>
+    <description>Recent content in Problem 20 on TeXify2 - hugo theme | weastur</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 11 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/problem-20/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2023 AMC 8 Problem 20</title>
+      <link>http://localhost:1313/post/amc8202320/</link>
+      <pubDate>Wed, 11 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/amc8202320/</guid>
+      <description>&lt;p&gt;Two integers are inserted into the list $3, 3, 8, 11, 28$ to double its range. The mode and median remain unchanged. What is the maximum possible sum of the two additional numbers?&lt;/p&gt;
+&lt;!--more --&gt;
+&lt;p&gt;&lt;strong&gt;Options:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;(A) 56&lt;/li&gt;
+&lt;li&gt;(B) 57&lt;/li&gt;
+&lt;li&gt;(C) 58&lt;/li&gt;
+&lt;li&gt;(D) 60&lt;/li&gt;
+&lt;li&gt;(E) 61&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;solution&#34;&gt;Solution&lt;/h3&gt;
+&lt;p&gt;To double the range, we must first find the current range, which is $28 - 3 = 25$. To double it, we need a range of $2(25) = 50$. To keep the median unchanged, we must choose a number smaller than 8 (to avoid changing the mode) and a number larger than 28. The optimal choice for the smaller number is 7 (as any number smaller than 3 will not help in maximizing the range). For the larger number, we select 53, as it maximizes the range without affecting the mode.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

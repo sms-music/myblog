@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Triangle Properties on TeXify2 - hugo theme | weastur</title>
+    <link>http://localhost:1313/categories/triangle-properties/</link>
+    <description>Recent content in Triangle Properties on TeXify2 - hugo theme | weastur</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language><atom:link href="http://localhost:1313/categories/triangle-properties/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2023 AMC 8 Problem 24</title>
+      <link>http://localhost:1313/post/amc8202325/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/amc8202325/</guid>
+      <description>&lt;h2 id=&#34;problem&#34;&gt;Problem&lt;/h2&gt;
+&lt;p&gt;Isosceles $\triangle ABC$ has equal side lengths $AB$ and $BC$. In the figure below, segments are drawn parallel to $\overline{AC}$ so that the shaded portions of $\triangle ABC$ have the same area. The heights of the two unshaded portions are 11 and 5 units, respectively. What is the height of $h$ of $\triangle ABC$?&lt;/p&gt;
+&lt;p&gt;[asy] //Diagram by TheMathGuyd size(12cm); real h = 2.5; // height real g=4; //c2c space real s = 0.65; //Xcord of Hline real adj = 0.08; //adjust line diffs pair A,B,C; B=(0,h); C=(1,0); A=-conj(C); pair PONE=(s,h*(1-s)); //Endpoint of Hline ONE pair PTWO=(s+adj,h*(1-s-adj)); //Endpoint of Hline ONE path LONE=PONE&amp;ndash;(-conj(PONE)); //Hline ONE path LTWO=PTWO&amp;ndash;(-conj(PTWO)); path T=A&amp;ndash;B&amp;ndash;C&amp;ndash;cycle; //Triangle   fill (shift(g,0)*(LTWO&amp;ndash;B&amp;ndash;cycle),mediumgrey); fill (LONE&amp;ndash;A&amp;ndash;C&amp;ndash;cycle,mediumgrey);  draw(LONE); draw(T); label(&amp;quot;$A$&amp;quot;,A,SW); label(&amp;quot;$B$&amp;quot;,B,N); label(&amp;quot;$C$&amp;quot;,C,SE);  draw(shift(g,0)*LTWO); draw(shift(g,0)*T); label(&amp;quot;$A$&amp;quot;,shift(g,0)*A,SW); label(&amp;quot;$B$&amp;quot;,shift(g,0)&lt;em&gt;B,N); label(&amp;quot;$C$&amp;quot;,shift(g,0)&lt;em&gt;C,SE);  draw(B&amp;ndash;shift(g,0)&lt;em&gt;B,dashed); draw(C&amp;ndash;shift(g,0)&lt;em&gt;A,dashed); draw((g/2,0)&amp;ndash;(g/2,h),dashed); draw((0,h&lt;/em&gt;(1-s))&amp;ndash;B,dashed); draw((g,h&lt;/em&gt;(1-s-adj))&amp;ndash;(g,0),dashed); label(&amp;quot;$5$&amp;quot;, midpoint((g,h&lt;/em&gt;(1-s-adj))&amp;ndash;(g,0)),UnFill); label(&amp;quot;$h$&amp;quot;, midpoint((g/2,0)&amp;ndash;(g/2,h)),UnFill); label(&amp;quot;$11$&amp;quot;, midpoint((0,h&lt;/em&gt;(1-s))&amp;ndash;B),UnFill); [/asy]&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
