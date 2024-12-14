@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Sabberton Music Society</title>
-    <link>https://github.com/sms-music/myblog/tags/</link>
+    <link>http://localhost:1313/sms-music/myblog/tags/</link>
     <description>Recent content in Tags on Sabberton Music Society</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 11 Mar 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://github.com/sms-music/myblog/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 11 Mar 2019 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/sms-music/myblog/tags/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

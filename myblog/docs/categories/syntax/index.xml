@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Syntax on Sabberton Music Society</title>
-    <link>https://github.com/sms-music/myblog/categories/syntax/</link>
+    <link>http://localhost:1313/sms-music/myblog/categories/syntax/</link>
     <description>Recent content in Syntax on Sabberton Music Society</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 11 Mar 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://github.com/sms-music/myblog/categories/syntax/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 11 Mar 2019 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/sms-music/myblog/categories/syntax/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Markdown Syntax Guide</title>
-      <link>https://github.com/sms-music/myblog/post/markdown-syntax-copy/</link>
+      <link>http://localhost:1313/sms-music/myblog/post/markdown-syntax-copy/</link>
       <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://github.com/sms-music/myblog/post/markdown-syntax-copy/</guid>
+      <guid>http://localhost:1313/sms-music/myblog/post/markdown-syntax-copy/</guid>
       <description>&lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Markdown Syntax Guide</title>
-      <link>https://github.com/sms-music/myblog/post/markdown-syntax/</link>
+      <link>http://localhost:1313/sms-music/myblog/post/markdown-syntax/</link>
       <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://github.com/sms-music/myblog/post/markdown-syntax/</guid>
+      <guid>http://localhost:1313/sms-music/myblog/post/markdown-syntax/</guid>
       <description>&lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p&gt;</description>
     </item>
     

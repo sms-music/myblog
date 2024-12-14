@@ -2,40 +2,40 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://github.com/sms-music/myblog/about/</loc>
+    <loc>http://localhost:1313/sms-music/myblog/about/</loc>
     <lastmod>2024-12-13T20:25:43+08:00</lastmod>
   </url><url>
-    <loc>https://github.com/sms-music/myblog/</loc>
+    <loc>http://localhost:1313/sms-music/myblog/</loc>
     <lastmod>2024-12-14T07:07:49+08:00</lastmod>
   </url><url>
-    <loc>https://github.com/sms-music/myblog/categories/</loc>
+    <loc>http://localhost:1313/sms-music/myblog/categories/</loc>
     <lastmod>2024-12-14T07:07:49+08:00</lastmod>
   </url><url>
-    <loc>https://github.com/sms-music/myblog/tags/css/</loc>
+    <loc>http://localhost:1313/sms-music/myblog/tags/css/</loc>
     <lastmod>2024-12-14T07:07:49+08:00</lastmod>
   </url><url>
-    <loc>https://github.com/sms-music/myblog/tags/html/</loc>
+    <loc>http://localhost:1313/sms-music/myblog/tags/html/</loc>
     <lastmod>2024-12-14T07:07:49+08:00</lastmod>
   </url><url>
-    <loc>https://github.com/sms-music/myblog/tags/markdown/</loc>
+    <loc>http://localhost:1313/sms-music/myblog/tags/markdown/</loc>
     <lastmod>2024-12-14T07:07:49+08:00</lastmod>
   </url><url>
-    <loc>https://github.com/sms-music/myblog/post/markdown-syntax-copy/</loc>
+    <loc>http://localhost:1313/sms-music/myblog/post/markdown-syntax-copy/</loc>
     <lastmod>2024-12-14T07:07:49+08:00</lastmod>
   </url><url>
-    <loc>https://github.com/sms-music/myblog/post/markdown-syntax/</loc>
+    <loc>http://localhost:1313/sms-music/myblog/post/markdown-syntax/</loc>
     <lastmod>2024-12-13T20:25:43+08:00</lastmod>
   </url><url>
-    <loc>https://github.com/sms-music/myblog/post/</loc>
+    <loc>http://localhost:1313/sms-music/myblog/post/</loc>
     <lastmod>2024-12-14T07:07:49+08:00</lastmod>
   </url><url>
-    <loc>https://github.com/sms-music/myblog/categories/syntax/</loc>
+    <loc>http://localhost:1313/sms-music/myblog/categories/syntax/</loc>
     <lastmod>2024-12-14T07:07:49+08:00</lastmod>
   </url><url>
-    <loc>https://github.com/sms-music/myblog/tags/</loc>
+    <loc>http://localhost:1313/sms-music/myblog/tags/</loc>
     <lastmod>2024-12-14T07:07:49+08:00</lastmod>
   </url><url>
-    <loc>https://github.com/sms-music/myblog/categories/themes/</loc>
+    <loc>http://localhost:1313/sms-music/myblog/categories/themes/</loc>
     <lastmod>2024-12-14T07:07:49+08:00</lastmod>
   </url>
 </urlset>
